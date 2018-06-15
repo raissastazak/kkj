@@ -17,85 +17,159 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#bt1").click(function () {
+            $("#bt1").click(function (){
                 var txt = $("header").text();
                 alert(txt);
             });
 
-
-            $("#bt2").click(function () {
-                var txt = $("header").html();
-                alert(txt);
+            $("#bt2").click(function (){
+                var txt2 = $("header").html();
+                alert(txt2);
             });
 
-
-            $("#bt3").click(function () {
-                var txt = $("input").val();
-                alert(txt);
+            $("#bt3").click(function (){
+                var val = $("input").val();
+                alert(val);
             });
 
-
-            $("#bt4").click(function () {
-                var txt = $("a").attr("href");
-                alert(txt);
+            $("#bt4").click(function (){
+                var val = $("a").attr("href");
+                alert(val);
             });
 
-
-            $("#bt5").click(function () {
+            $("#bt5").click(function(){
                 $("#paragrafo1").text("NOVO TEXTO DO PARAGRAFO");
-
             });
 
-
-            $("#bt6").click(function () {
+            $("#bt6").click(function(){
                 $("#paragrafo2").html("<b>NOVO TEXTO DO PARAGRAFO</b>");
-
             });
 
-
-            $("#bt7").click(function () {
-                $("input").val("Novo conteudo");
-
+            $("#bt7").click(function(){
+                $("input").val("Novo valorzinho");
             });
 
             $("#bt8").click(function () {
-                $()
+                var txt= $("a").attr("href");
+                alert(txt);
+            });
 
-            })
 
+            $("#bt9").click(function(){
+                $("img").attr("src", "apagada.jpg");
+            });
 
+            $("#bt10").click(function(){
+                $("ol").append("<li>Quarto</li>");
+            });
+
+            $("#bt11").click(function(){
+                $("ol").prepend("<li>Primeiro antes do primeiro</li>");
+            });
+
+            $("#bt12").click(function(){
+                $("#paragrafo1").prepend("Hello Kitty ");
+            });
+
+            $("#bt13").click(function(){
+                $("#paragrafo2").append(" Polly e barbie");
+            });
+
+            $("#bt14").click(function(){
+                $("h1").remove();
+            });
+
+            $("#bt15").click(function(){
+                $("#conteudo-principal").children().remove();
+            });
+            $("#bt16").click(function(){
+                $(".texto").remove();
+            });
+            $("#bt17").click(function(){
+                $(".texto, .outro").remove();
+            });
+            $("#bt18").click(function(){
+                $("#paragrafo1").addClass("azul");
+            });
+            $("#bt19").click(function(){
+                $("#paragrafo2").addClass("importante", "vermelho");
+            });
+            $("#bt20").click(function(){
+                $("#paragrafo1").removeClass("azul");
+            });
+            $("#bt21").click(function(){
+                $("#paragrafo2").toggleClass("importante");
+            });
+
+            $("#bt22").click(function(){
+                $("#paragrafo3").css("background-color", "green");
+            });
+
+            $("#bt23").click(function(){
+                $("h1").css("border-style", "dotted");
+            });
+
+            $("#bt24").click(function () {
+                alert($("#paragrafo1").css("color"))
+
+            });
+
+            $("#bt25").click(function(){
+                $("#paragrafo2").css("background-color", "cyan");
+                $("#paragrafo2").css("font-color", "pink");
+                $("#paragrafo2").css("font-size", "25px");
+                $("#paragrafo2").css("padding", "15px");
+            });
+
+            $("#bt26").click(function () {
+                    alert($("input").css("width"))
+            });
+
+            $("#bt27").click(function () {
+                alert($("#paragrafo1").css("height"))
+            });
+
+            $("#bt28").click(function(){
+                $("#paragrafo3").parent().css("border-style", "dashed");
+
+            });
+            $("#bt29").click(function(){
+                $("span").parent().css("border-style", "outset");
+
+            });
+            $("#bt30").click(function(){
+                $("h1").children().css("border-style", "double");
+
+            });
 
         });
-
-
 
     </script>
 </head>
 <body>
-    <header>
-        <h1>Página de exercícios - <span class="destaque">jQuery</span></h1>
-    </header>
-    <section id="conteudo-principal">
-        <img src="acesa.jpg" width="100px">
-        <p class="texto" id="paragrafo1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores corporis deserunt dolor dolorem harum hic, illum iste, labore minima necessitatibus sed similique, ut. Expedita impedit ipsa iure nihil nulla.
-        </p>
-        <input type="text" value="caixa de entrada de texto">
-        <ol>
-            <li>Primeiro</li>
-            <li>Segundo</li>
-            <li>Terceiro</li>
-        </ol>
+<header>
+    <h1>Página de exercícios - <span class="destaque">jQuery</span></h1>
+</header>
+<section id="conteudo-principal">
+    <img src="acesa.jpg" width="100px">
+    <p class="texto" id="paragrafo1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores corporis deserunt dolor dolorem harum hic, illum iste, labore minima necessitatibus sed similique, ut. Expedita impedit ipsa iure nihil nulla.
+    </p>
+    <input type="text" value="caixa de entrada de texto">
+    <ol>
+        <li>Primeiro</li>
+        <li>Segundo</li>
+        <li>Terceiro</li>
+    </ol>
 
-        <p class="texto" id="paragrafo2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores corporis deserunt dolor dolorem harum hic, illum iste, labore minima necessitatibus sed similique, ut. Expedita impedit ipsa iure nihil nulla.
-        </p>
+    <p class="texto" id="paragrafo2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores corporis deserunt dolor dolorem harum hic, illum iste, labore minima necessitatibus sed similique, ut. Expedita impedit ipsa iure nihil nulla.
+    </p>
 
-        <p class="outro">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda cum, cupiditate deleniti eaque iusto magnam quae quos sunt suscipit? Asperiores ducimus earum, necessitatibus nisi perspiciatis praesentium quia sunt temporibus.
-        </p>
-        <a href="http://ifc.edu.br" id="link1">IFC</a> <br>
-
+    <p class="outro" id="paragrafo3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda cum, cupiditate deleniti eaque iusto magnam quae quos sunt suscipit? Asperiores ducimus earum, necessitatibus nisi perspiciatis praesentium quia sunt temporibus.
+    </p>
+    <a href="http://ifc.edu.br" id="link1">IFC</a> <br>
     </section>
     <footer>
         <button id="bt1">Questao 1</button>
